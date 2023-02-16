@@ -34,7 +34,7 @@ app.use('/connection', connectionRouter)
 async function main(){
     mongoose.set('strictQuery', true)
     await mongoose.connect(process.env.URL_DB);
-    await app.listen(process.env.SERVER_PORT)
+    await app.listen(process.env.PORT)
     console.log('Servidor y base de datos encencidos')
 }
 main().catch(error => 
